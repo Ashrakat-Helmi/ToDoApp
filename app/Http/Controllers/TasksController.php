@@ -27,6 +27,10 @@ class TasksController extends Controller
 
         return view('Tasks.index',$data);
     }
+    public function create()
+    {
+        return view('Tasks.create');
+    }
     public function store(Request $request) { 
 
         $request->validate([

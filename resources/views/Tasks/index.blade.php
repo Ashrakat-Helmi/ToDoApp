@@ -69,67 +69,14 @@
                                 @endforeach
                             @endif
 
-                            <button
-                            class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
-                            type="button"
-                            data-twe-collapse-init
-                            data-twe-target="#collapseWidthExample"
-                            data-twe-ripple-init
-                            data-twe-ripple-color="light"
-                            aria-expanded="false"
-                            aria-controls="collapseWidthExample">
-                            Add Task
-                          </button>
-                          <div
-                            class="!visible hidden"
-                            data-twe-collapse-item
-                            data-twe-collapse-horizontal
-                            id="collapseWidthExample">
-                            <div>
-                              
-                            </div>
+                            <a href="{{route('Tasks.create')}}">
+                                <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                                    Add Task
+                                  </button>
+                            </a>
+                         
                           </div>
-                                    <p class="d-inline-flex gap-1">
-                                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseExample" aria-expanded="false"
-                                            aria-controls="collapseExample">
-                                            Add Task
-                                        </button>
-                                    </p>
-                                    <div class="collapse" id="collapseExample">
-                                        <div class="card card-body">
-                                            <form method="POST" action="{{ route('Tasks.store') }}" id="task_add_form">
-                                                @csrf
-                                                <div class="mb-3">
-                                                    <label for="title" class="form-label">Task title</label>
-                                                    <input type="text" name="title" class="form-control"
-                                                        id="title">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="description" class="form-label">Task
-                                                        description</label>
-                                                    <textarea name="description" class="form-control" id="description" cols="30" rows="10"></textarea>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="category" class="form-label">Task Category</label>
-                                                    <select class="form-select" name="category" id="category"
-                                                        aria-label="Default select example">
-                                                        <option value="">Select Task Category</option>
-                                                        <option value="Personal">Personal</option>
-                                                        <option value="Work">Work</option>
-                                                        <option value="Urgent">Urgent</option>
-                                                    </select>
-                                                </div>
-
-                                                <div class="mb-3">
-                                                    <label for="due_date" class="form-label">Due Date</label>
-                                                    <input type="date" name="due_date" class="form-control"
-                                                        id="due_date">
-                                                </div>
-                                                <button type="submit" class="btn btn-primary">Submit</button>
-                                            </form>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                                 <div class="col-md-12 mt-4">
                                     <div class="row">
@@ -150,7 +97,7 @@
                                             @endforeach
                                         @else
                                             <div class="col-md-12 mb-4">
-                                                No tASKS Found. Please Add Tasks.
+                                                No Tasks Found. Please Add Tasks.
                                             </div>
                                         @endif
                                         @if (count($tasks))
@@ -276,18 +223,3 @@
         </script>
     </x-slot>
 </x-app-layout>
-<div class="p-6 mt-4 ml-2 sm:rounded-lg dark:bg-gray-800 border border-gray-200 dark:border-gray-700 md:border-l">
-
-</div>
-
-<div class="p-6 mt-4 ml-2 sm:rounded-lg dark:bg-gray-800 border border-gray-200 dark:border-gray-700 md:border-l">
-    <img src="{{ asset('imgs/download (1).png') }}" alt="">
-</div>
-
-<div class="p-6 mt-4 ml-2 sm:rounded-lg dark:bg-gray-800 border border-gray-200 dark:border-gray-700 md:border-l">
-    <img src="{{ asset('imgs/download (1).png') }}" alt="">
-</div>
-
-<div class="p-6 mt-4 ml-2 sm:rounded-lg dark:bg-gray-800 border border-gray-200 dark:border-gray-700 md:border-l">
-    <img src="{{ asset('imgs/download (3).jpg') }}" alt="">
-</div>

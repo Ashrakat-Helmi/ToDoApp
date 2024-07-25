@@ -30,7 +30,7 @@ Route::middleware('auth')->group(function () {
 
     //lists routes
     Route::get('/tasks',[TasksController::class, 'index'])->name('Tasks.index');
-    Route::get('/tasks/create', [TasksController::class,'store'])->name('Tasks.create');
+    Route::get('/tasks/create', [TasksController::class,'create'])->name('Tasks.create');
     Route::post('tasks/create', [TasksController::class , 'store'])->name('Tasks.store');
     Route::get('/lists/show/{list:id}', [TasksController::class, 'show'])->name('lists.show');
     Route::get('/lists/edit/{list:id}', [TasksController::class, 'edit'])->name('lists.edit');
