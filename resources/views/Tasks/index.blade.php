@@ -79,7 +79,7 @@
                                     
                                 </div>
                                 <div class="col-md-12 mt-4">
-                                    <div class="row">
+                                    <div class="grid grid-cols-1 md:grid-cols-3">
                                         @if (count($tasks))
                                             @foreach ($tasks as $task)
                                                 <div
@@ -90,8 +90,9 @@
                                                             {{ $task->category }}</h6>
                                                         <p class="card-text">{{ $task->description }}</p>
                                                         <p class="card-text">{{ $task->due_date }}</p>
-                                                        <a href="#" class="card-link">Card link</a>
-                                                        <a href="#" class="card-link">Another link</a>
+                                                        <a href="#" class="card-link">edit</a>
+                                                        Or
+                                                        <a href="#" class="card-link">delete</a>
                                                     </div>
                                                 </div>
                                             @endforeach
